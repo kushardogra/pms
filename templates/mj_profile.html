@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "style.css" %}">
+    <title>Player</title>
+</head>
+<body>
+    <div class="sidenav">
+        <div class="ab">
+			<span style="color: white ;" class="name_h"> P</span>
+			<span style="color: #D9C61B ;"class="name_h"> M</span>
+			<span style="color: white ;" class="name_h"> S</span>
+		</div>
+        <div class="options">
+            <a href="{% url 'player' %}" class="selected">Players</a>
+            <a href="{%  url 'coaches' %}">Coaches</a>
+            <a href="{% url 'team' %}" >Teams</a>
+            <a href="{%  url 'logout' %}" style="color: #D9C61B ;">Logout</a>
+        </div>
+    </div>
+    <h2 style="margin-left: 300px; margin-top: 100px;">Player Profile</h2>
+    <div class="container">
+            <div class="image-container" id="add-container" >
+                <img class="image1" src="{% static "image/mj.jpg" %}" alt="">
+            </div>
+            
+            
+        <div class="detail_container">
+            <p class="normal">Micheal Jordan </p><br>
+            <p class="small"> Age:37 </p>
+            <p class="large"> Mobile Number: 1234567890</p> <br>
+            <p class="large"> Position: Center Forward</p>
+            <p class="small"> Height: 2.06m </p><br>
+            <p class="normal"> Gauradin: Lanthony Mcclelland 
+                </p> <br>
+            <p class="small_j"> Jersey: 6</p>
+            <p class="large_j">Mobile Number:1234567890 </p><br>
+            <p class="normal">221, Baker's Street </p><br>
+            <p class="normal">London</p> <br>
+            <p class="normal">United Kingdoms </p>
+            <button type="button" class="delete">DELETE</button>
+        </div>        
+    </div>
+</body>
+</html>

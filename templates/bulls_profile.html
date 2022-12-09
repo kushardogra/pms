@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "style.css" %}">
+    <title>Player</title>
+</head>
+<body>
+    <div class="sidenav">
+        <div class="ab">
+			<span style="color: white ;" class="name_h"> P</span>
+			<span style="color: #D9C61B ;"class="name_h"> M</span>
+			<span style="color: white ;" class="name_h"> S</span>
+		</div>
+        <div class="options">
+            <a href="{% url 'player' %}" >Players</a>
+            <a href="{%  url 'coaches' %}">Coaches</a>
+            <a href="{% url 'team' %}" class="selected">Teams</a>
+            <a href="{%  url 'logout' %}" style="color: #D9C61B ;">Logout</a>
+        </div>
+    </div>
+
+</body>
+</html>

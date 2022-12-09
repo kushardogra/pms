@@ -1,0 +1,127 @@
+*{
+    margin : 0;
+    padding : 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+   background-color: #06283D;
+  }
+  
+  .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: -1;
+  }
+  .pl_img{
+    width: 30%;
+    margin-top: 2%;
+    margin-left: 12%;
+  }
+  .brand{
+    margin-top: 7%;
+    margin-left: 12%;
+  }
+  
+  .ab{
+    margin-left: 11%;
+    letter-spacing: -7px;
+  }
+
+  .name_h{
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 91px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 10%;
+    left: 10%;
+
+  }
+
+  .name{
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 37px;
+    letter-spacing: 0em;
+    text-align: left;
+
+  }
+
+  .vl {
+    border-left: 3px solid white;
+    height: 600px;
+    position: absolute;
+    left: 60%;
+    margin-left: -3px;
+    top: 7%;
+  }
+  
+    /*Box*/
+  .container{
+    color: white;
+    width: 25%;
+    text-align: center;
+    height: 100%;
+  }
+  .container-center{
+    position:absolute;
+    top: 40%;
+    left:80%;
+    transform: translate(-50%,-50%)
+  }
+    .photo{
+      margin-top:80px;
+      max-width: 100%;
+    height: auto;
+    }
+    /* TOP SIGN IN*/
+    .intro{
+      font-weight: 700;
+      font-size:50px;
+      padding-top: 30px;
+      padding-bottom: 15px;
+      margin-top:60%;
+      border-radius:15px;	
+      
+    }
+    /* Input Name*/
+    .input_type{
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 15px;
+        font-size: 110%;
+    }
+    /* Input Area*/
+    input
+    {
+      height: 40%;
+      width: 100%;
+      border-radius: 20px solid;
+      text-indent: 5%;
+      font-size: 15px;
+      line-height:29px;
+      height:40px;
+      background-color:#2B4865; 
+       margin-bottom: 5px;
+      margin-top: 10px;
+    }
+  /*Sign In Button*/
+  button 
+  {
+      font-family: Ubuntu-Bold;
+      height: 30%;
+      width: 40%;
+      border-radius: 10px;
+      font-size: 20px;
+      line-height:29px;
+      height:40px;
+      cursor: pointer;
+      text-transform: uppercase;
+      margin-top: 5px;
+      background-color: #1363DF;
+      color: white;
+  }

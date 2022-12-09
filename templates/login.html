@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' >
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>LogIn</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css.css' %}">
+
+</head>
+<body>
+	<div class="brand">
+		<div class="ab">
+			<span style="color: white ;" class="name_h"> P</span>
+			<span style="color: #D9C61B ;"class="name_h"> M</span>
+			<span style="color: white ;" class="name_h"> S</span>
+		</div>
+		 
+		<span style="color: white ;" class="name"> PLAYER MANAGEMENT SYSTEM</span>
+	</div>
+    <div>
+		<img class="pl_img" src="{% static "image/players.png" %}" alt="">
+	</div>
+	<div class="vl"></div>
+    
+    <div class="container container-center">
+		<h1 class="intro"> LOGIN</h1>
+		<form action="" method="post">
+            {% csrf_token %}
+			<div class="username" data-validate="ENTER YOUR EMAIL">
+				<input type="text" name="username" placeholder=" ENTER YOUR EMAIL" required>
+			</div>
+			<div class="password" data-validate="PASSWORD">
+				<input type="password" name="password" placeholder="PASSWORD" required>
+			</div>
+            <a href="{%  url 'register' %}">
+                <button type="button">NEW</button>
+            </a>
+				<button id="login-btn"> LOGIN </button>
+		</form>  
+</body>
+</html>

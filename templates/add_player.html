@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "style.css" %}">
+    <title>Player</title>
+</head>
+<body>
+    <div class="sidenav">
+        <div class="ab">
+			<span style="color: white ;" class="name_h"> P</span>
+			<span style="color: #D9C61B ;"class="name_h"> M</span>
+			<span style="color: white ;" class="name_h"> S</span>
+		</div>
+        <div class="options">
+            <a href="{% url 'player' %}" class="selected" >Players</a>
+            <a href="{%  url 'coaches' %}">Coaches</a>
+            <a href="{% url 'team' %}" >Teams</a>
+            <a href="{%  url 'logout' %}" style="color: #D9C61B ;">Logout</a>
+        </div>
+    </div>
+    <h2 style="margin-left: 300px; margin-top: 100px;">Add a new member to the family!</h2> 
+    <div class="container">
+            <div class="image-container" id="add-container" >
+                <img class="image" src="" alt="" id="add-preview">
+            </div>
+    <form action="register" method="POST">
+        {% csrf_token %}
+            
+        <div class="detail_container">
+            <input type="text" id="player_name" name="player_name" placeholder=" Enter Player Name" required class="normal"> <br>
+            <input type="text" id="player_age" name="age" placeholder=" Age" required class="small">
+            <input type="text" id="player_emailID" name="email_address" placeholder=" Email ID" required class="large"> <br>
+            <input type="text" id="player_position" name="player_pos" placeholder=" Enter Player Postion" required class="large">
+            <input type="text" id="player_height" name="height" placeholder=" Height" required class="small"> <br>
+            <input type="text" id="player_gaurdianName" name="guardian_name" placeholder=" Enter Guradian Name" required class="normal"> <br>
+            <input type="text" id="player_jerseyNum" name="jersey_no" placeholder=" Jersey No." required class="small_j">
+            <input type="text" id="player_mobileNum" name="mobile_number" placeholder=" Mobile Number" required class="large_j"> <br>
+            <input type="text" id="player_addressLine1" name="address_lin1" placeholder=" Address Line 1" required class="normal"> <br>
+            <input type="text" id="player_addressLine2" name="address_lin2" placeholder=" Address Line 2" required class="normal"> <br>
+            <input type="text" id="player_addressLine3" name="address_lin3" placeholder=" Address Line 3" required class="normal">
+            <label class="add_i" for="add-image">Add Image</label>
+            <input type="file" id="add-image" accept="image/*" onchange="showPreview(event);" style="display: none;">
+            <button type="button" class="save">SAVE</button>
+        </div>        
+    </form>
+    </div>
+    <script>
+        function showPreview(event){
+        if(event.target.files.length > 0){
+            var src = URL.createObjectURL(event.target.files[0]);
+            var preview = document.getElementById("add-preview");
+            var previewcontainer = document.getElementById("add-container");
+            preview.src = src;
+            preview.style.display = "block";
+            previewcontainer.style.border="none";
+            }
+        }
+        
+    </script>
+</body>
+</html>
