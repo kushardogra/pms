@@ -37,13 +37,11 @@
         <input type="text" id="coach_addressLine1" name="address_lin1" placeholder=" Address Line 1" required class="normal"> <br>
         <input type="text" id="coach_addressLine2" name="address_lin2" placeholder=" Address Line 2" required class="normal"> <br>
         <input type="text" id="coach_addressLine3" name="address_lin3" placeholder=" Address Line 3" required class="normal"> <br>
-
-
-    </div>
-        </form>
         <label class="add_i" for="add-image">Add Image</label>
-        <input type="file" id="coach_image" accept="image/*" onchange="showPreview(event);" style="display: none;">
+        <input type="file" id="add-image" accept="image/*" onchange="showPreview(event);" style="display: none;">
         <button type="button" class="save">SAVE</button>
+        </div>
+        </form>
     </div>
     <script>
         function showPreview(event){
