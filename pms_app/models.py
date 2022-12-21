@@ -1,7 +1,6 @@
 from django.db import models
 from django.db.models import Model
 
-
 class player(models.Model):
     player_ID= models.CharField(max_length=200, null=False)
     player_image=models.ImageField(upload_to='images')
@@ -16,7 +15,6 @@ class player(models.Model):
     player_addressLine1 = models.CharField(max_length=200, null=False)
     player_addressLine2 = models.CharField(max_length=200, null=False)
     player_addressLine3 = models.CharField(max_length=200, null=False)
-
 class coach(models.Model):
     coach_ID= models.CharField(max_length=200, null=False)
     coach_image=models.ImageField(upload_to='images')
@@ -27,7 +25,6 @@ class coach(models.Model):
     coach_addressLine1 = models.CharField(max_length=200, null=False)
     coach_addressLine2 = models.CharField(max_length=200, null=False)
     coach_addressLine3 = models.CharField(max_length=200, null=False)
-
 class team(models.Model):
     team_ID= models.CharField(max_length=200, null=False)
     team_image=models.ImageField(upload_to='images')
